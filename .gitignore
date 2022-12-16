@@ -1,0 +1,33 @@
+# Logs
+.DS_Store
+tmp
+temp
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Coverage
+coverage
+
+# Transpiled files
+out/
+
+# VS Code
+.vscode
+!.vscode/tasks.js
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Internal config
+config/qualiant*
+
+# Misc
+data
+test_config.*

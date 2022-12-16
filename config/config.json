@@ -1,0 +1,18 @@
+{
+	"options": {
+		"port": 9090,
+		"pollingTime": {
+			"hh": 5,
+			"mi": 0
+		}
+	},
+	"repositories": [
+		{
+			"id": "test_repo",
+			"name": "test repository",
+			"dir": "temp/test_repo",
+			"username": "test_username",
+			"password": "test_password"
+		}
+	]
+}
