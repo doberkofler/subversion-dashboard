@@ -29,5 +29,5 @@ out/
 config/qualiant*
 
 # Misc
-data
+./data
 test_config.*
