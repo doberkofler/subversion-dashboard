@@ -18,9 +18,9 @@ This project is intended to be used with the latest Active LTS release of [Node.
 
 [MIT](LICENSE)
 
-[ts-badge]: https://img.shields.io/badge/TypeScript-4.5-blue.svg
+[ts-badge]: https://img.shields.io/badge/TypeScript-4.9-blue.svg
 [nodejs-badge]: https://img.shields.io/badge/Node.js->=%2016.13-blue.svg
-[nodejs]: https://nodejs.org/dist/latest-v14.x/docs/api/
+[nodejs]: https://nodejs.org/dist/latest-v18.x/docs/api/
 [typescript]: https://www.typescriptlang.org/
 [license-badge]: https://img.shields.io/badge/license-APLv2-blue.svg
 [license]: https://github.com/doberkofler/subversion-dashboard/blob/main/LICENSE
