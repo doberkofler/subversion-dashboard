@@ -17,10 +17,11 @@ import {tokens} from '../../global/theme';
 import {Header} from './Header';
 import {ProgressCircle} from './ProgressCircle';
 import {StatBox} from './StatBox';
+import {WidgetTitle} from './WidgetTitle';
+import {LineChart} from './LineChart';
 
 import {mockTransactions} from './mockData';
 
-const LineChart = ({isDashboard}: {isDashboard: boolean}): JSX.Element => <div>{`LineChart(${isDashboard ? 'dashboard' : ''}`}</div>;
 const BarChart = ({isDashboard}: {isDashboard: boolean}): JSX.Element => <div>{`BarChart(${isDashboard ? 'dashboard' : ''}`}</div>;
 const GeographyChart = ({isDashboard}: {isDashboard: boolean}): JSX.Element => <div>{`GeographyChart(${isDashboard ? 'dashboard' : ''}`}</div>;
 
@@ -33,7 +34,6 @@ export const Dashboard = (): JSX.Element => {
 			{/* HEADER */}
 			<Box display="flex" justifyContent="space-between" alignItems="center">
 				<Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
-
 				<Box>
 					<Button sx={{backgroundColor: colors.blueAccent[700], color: colors.grey[100], fontSize: '14px', fontWeight: 'bold', padding: '10px 20px'}}>
 						<DownloadOutlinedIcon sx={{mr: '10px'}} />
@@ -60,14 +60,10 @@ export const Dashboard = (): JSX.Element => {
 
 				{/* ROW 2 */}
 				<Box gridColumn="span 8" gridRow="span 2" sx={{backgroundColor: colors.primary[400]}}>
-					<Box mt="25px" p="0 30px" display="flex " justifyContent="space-between" alignItems="center">
+					<Box mt="25px" p="0 30px" display="flex" justifyContent="space-between" alignItems="center">
 						<Box>
-							<Typography variant="h5" fontWeight="600" color={colors.grey[100]}>
-								Revenue Generated
-							</Typography>
-							<Typography variant="h5" fontWeight="bold" color={colors.greenAccent[500]}>
-								$59,342.32
-							</Typography>
+							<WidgetTitle title="Revenue Generated" />
+							<Typography variant="h5" fontWeight="bold" color={colors.greenAccent[500]}>$59,342.32</Typography>
 						</Box>
 						<Box>
 							<IconButton>
@@ -81,7 +77,7 @@ export const Dashboard = (): JSX.Element => {
 				</Box>
 				<Box gridColumn="span 4" gridRow="span 2" sx={{backgroundColor: colors.primary[400]}} overflow="auto">
 					<Box display="flex" justifyContent="space-between" alignItems="center" borderBottom={`4px solid ${colors.primary[500]}`} sx={{colors: colors.grey[100]}} p="15px">
-						<Typography color={colors.grey[100]} variant="h5" fontWeight="600">Recent Transactions</Typography>
+						<WidgetTitle title="Recent Transactions" />
 					</Box>
 					{mockTransactions.map((transaction, i) => (
 						<Box key={`${transaction.txId}-${i}`} display="flex" justifyContent="space-between" alignItems="center" borderBottom={`4px solid ${colors.primary[500]}`} p="15px">
@@ -97,7 +93,7 @@ export const Dashboard = (): JSX.Element => {
 
 				{/* ROW 3 */}
 				<Box gridColumn="span 4" gridRow="span 2" sx={{backgroundColor: colors.primary[400]}} p="30px">
-					<Typography variant="h5" fontWeight="600">Campaign</Typography>
+					<WidgetTitle title="Campaign" />
 					<Box display="flex" flexDirection="column" alignItems="center" mt="25px">
 						<ProgressCircle progress={.75} size="125" />
 						<Typography variant="h5" color={colors.greenAccent[500]} sx={{mt: '15px'}}>$48,352 revenue generated</Typography>
